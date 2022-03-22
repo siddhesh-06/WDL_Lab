@@ -1,0 +1,26 @@
+[
+    {
+        "id" : 1,
+        "name" : "Siddhesh",
+        "age" : 19,
+        "branch" : "IT"
+    },
+    {
+        "id" : 2,
+        "name" : "Piyush",
+        "age" : 20,
+        "branch" : "IT"
+    },
+    {
+        "id" : 3,
+        "name" : "Sanket",
+        "age" : 29,
+        "branch" : "ENTC"
+    },
+    {
+        "id" : 4,
+        "name" : "Pranav",
+        "age" : 18,
+        "branch" : "CS"
+    }
+]

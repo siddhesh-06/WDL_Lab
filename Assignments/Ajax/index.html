@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>My Info</h2>
+
+<p id="demo">Hello, siddhesh here :)</p>
+
+<button type="button" onclick="loadDoc()"> More !</button>
+
+<script>
+function loadDoc() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "db.json", false);
+  xhttp.send();
+
+  // JSON
+  var data = JSON.parse(xhttp.responseText)
+
+  document.getElementById("demo").innerHTML = data.name;
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        td,
+        th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Student Table</h2>
+
+    <table id="student-table">
+        <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Branch</th>
+        </tr>
+    </table>
+    <button type="button" onclick="loadDoc()"> More !</button>
+</body>
+<script>
+    function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "db.json", false);
+        xhttp.send();
+
+        // JSON
+        var data = JSON.parse(xhttp.responseText)
+        console.log(data.length)
+        let stud_data = document.getElementById("student-table");
+        for (var i = 0; i < data.length; i++) {
+            var row =
+                `<tr>
+                <td>${data[i].name}</td>
+                <td> ${data[i].age} </td>
+                <td> ${data[i].branch} </td>
+                </tr>`;
+            stud_data.innerHTML += row;
+        }
+    }
+</script>
+
+</html>

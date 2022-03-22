@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    
+    <div>
+        <img src="https://www.pngitem.com/pimgs/m/123-1232373_coin-png-pic-heads-and-tails-indian-coin.png" width = "500px" height = "500px" id = "image"  alt="">
+        <br>
+        <br>
+        <button id = "flip">Flip 🤣 </button>
+        <br>
+        <br>
+    </div>
+
+    <input type="button" id = "coin" value="Heads">
+    
+    <script>
+
+        const btn= document.getElementById("coin");
+
+    btn.addEventListener("click",function toss(){
+            if(btn.value == "Heads"){
+               btn.value = "Tails"
+            }
+            else{
+                btn.value = "Heads";
+            }
+        })
+        
+        const btn1 = document.getElementById("flip");
+        const img = document.getElementById("image")
+
+        
+
+        btn1.addEventListener("click",function(){
+            if(img.src == "https://qphs.fs.quoracdn.net/main-qimg-148ae81e6fe0500e130fb547026a9b26-lq"){
+                console.log("Orabavafa")
+                img.src = "https://www.pngitem.com/pimgs/m/123-1232373_coin-png-pic-heads-and-tails-indian-coin.png"
+             
+            }
+            else{
+                img.src = "https://qphs.fs.quoracdn.net/main-qimg-148ae81e6fe0500e130fb547026a9b26-lq"
+                
+            }
+        })
+
+    </script>
+
+</body>
+</html>
